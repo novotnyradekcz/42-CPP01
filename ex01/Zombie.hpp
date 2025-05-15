@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 22:36:55 by rnovotny          #+#    #+#             */
-/*   Updated: 2025/05/12 10:33:18 by rnovotny         ###   ########.fr       */
+/*   Updated: 2025/05/15 18:52:10 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class Zombie
 		Zombie(std::string name);
 		~Zombie();
 		void announce(void);
+		void setName(std::string name);
 	private:
 		std::string _name;
 };
