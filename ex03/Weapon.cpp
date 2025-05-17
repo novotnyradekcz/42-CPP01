@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 11:39:31 by rnovotny          #+#    #+#             */
-/*   Updated: 2025/05/12 11:41:11 by rnovotny         ###   ########.fr       */
+/*   Updated: 2025/05/17 14:31:48 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ Weapon::Weapon(std::string type) : _type(type) {}
 
 Weapon::~Weapon() {}
 
-std::string	Weapon::getType() const
+const std::string&	Weapon::getType() const
 {
 	return (this->_type);
 }
