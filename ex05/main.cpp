@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 12:22:38 by rnovotny          #+#    #+#             */
-/*   Updated: 2025/05/12 12:23:03 by rnovotny         ###   ########.fr       */
+/*   Updated: 2025/05/17 15:23:52 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,24 @@
 
 int main(int argc, char **argv)
 {
-	if (argc != 2)
-	{
-		std::cout << "Usage: ./harlFilter <level>" << std::endl;
-		return (1);
-	}
-
 	Harl	harl;
 
-	harl.complain(argv[1]);
+	if (argc != 2)
+	{
+		std::cout << "DEBUG:" << std::endl;
+		harl.complain("DEBUG");
+		std::cout << "INFO:" << std::endl;
+		harl.complain("INFO");
+		std::cout << "WARNING:" << std::endl;
+		harl.complain("WARNING");
+		std::cout << "ERROR:" << std::endl;
+		harl.complain("ERROR");
+		return (1);
+	}
+	else
+	{
+		harl.complain(argv[1]);
+	}
+
 	return (0);
 }
