@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 12:20:22 by rnovotny          #+#    #+#             */
-/*   Updated: 2025/05/17 15:26:19 by rnovotny         ###   ########.fr       */
+/*   Updated: 2025/05/21 09:02:32 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,5 @@ void Harl::complain(std::string level)
 			return;
 		}
 	}
-	std::cout << "Invalid level." << std::endl;
+	std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 }
