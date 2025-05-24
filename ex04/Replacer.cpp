@@ -6,13 +6,13 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/24 15:08:59 by rnovotny          #+#    #+#             */
-/*   Updated: 2025/05/24 15:46:56 by rnovotny         ###   ########.fr       */
+/*   Updated: 2025/05/24 19:12:28 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Replacer.hpp"
 
-Replacer::Replacer(const std::string& filename, const std::string& s1, const std::string& s2)
+Replacer::Replacer(const char* filename, const std::string& s1, const std::string& s2)
 	: filename(filename), s1(s1), s2(s2)
 {
 	std::cout << "Replacer created with filename: " << filename
@@ -64,7 +64,7 @@ bool Replacer::replaceStringsInFile() const
 	}
 	infile.close();
 
-	std::string output_file = filename + ".replace";
+	std::string output_file = std::string(filename) + ".replace";
 	std::ofstream outfile(output_file.c_str());
 	if (!outfile)
 	{
