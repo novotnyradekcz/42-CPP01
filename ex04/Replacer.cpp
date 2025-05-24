@@ -6,14 +6,23 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/24 15:08:59 by rnovotny          #+#    #+#             */
-/*   Updated: 2025/05/24 15:32:55 by rnovotny         ###   ########.fr       */
+/*   Updated: 2025/05/24 15:46:56 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Replacer.hpp"
 
 Replacer::Replacer(const std::string& filename, const std::string& s1, const std::string& s2)
-	: filename(filename), s1(s1), s2(s2) {}
+	: filename(filename), s1(s1), s2(s2)
+{
+	std::cout << "Replacer created with filename: " << filename
+	          << ", s1: " << s1 << ", s2: " << s2 << std::endl;
+}
+
+Replacer::~Replacer()
+{
+	std::cout << "Replacer destroyed." << std::endl;
+}
 
 bool Replacer::validateInputs() const
 {
