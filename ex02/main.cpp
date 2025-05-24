@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 10:38:24 by rnovotny          #+#    #+#             */
-/*   Updated: 2025/05/17 14:29:30 by rnovotny         ###   ########.fr       */
+/*   Updated: 2025/05/24 19:20:42 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,10 @@ int	main()
 	std::string	*stringPTR = &str;
 	std::string	&stringREF = str;
 
-	std::cout << "Address of string variable: &str = " << &str << std::endl;
-	std::cout << "Address of string pointer: &stringPTR = " << &stringPTR << std::endl;
-	std::cout << "Address of string reference: &stringREF = " << &stringREF << std::endl;
-	std::cout << "Value of string variable: str = " << str << std::endl;
-	std::cout << "Value of string pointer: stringPTR = " << stringPTR << std::endl;
-	std::cout << "Value string pointer points to: *stringPTR = " << *stringPTR << std::endl;
-	std::cout << "Value of string reference: stringREF = " << stringREF << std::endl;
+	std::cout << "The memory address of the string variable: &str = " << &str << std::endl;
+	std::cout << "The memory address held by stringPTR: stringPTR = " << stringPTR << std::endl;
+	std::cout << "The memory address held by stringREF: &stringREF = " << &stringREF << std::endl;
+	std::cout << "The value of the string variable: str = " << str << std::endl;
+	std::cout << "The value pointed to by stringPTR: *stringPTR = " << *stringPTR << std::endl;
+	std::cout << "The value pointed to by stringREF: stringREF = " << stringREF << std::endl;
 }
