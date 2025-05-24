@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Replacer.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/12 12:05:45 by rnovotny          #+#    #+#             */
-/*   Updated: 2025/05/24 15:23:20 by rnovotny         ###   ########.fr       */
+/*   Created: 2025/05/24 15:09:03 by rnovotny          #+#    #+#             */
+/*   Updated: 2025/05/24 15:20:05 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Replacer.hpp"
+#ifndef REPLACER_HPP
+# define REPLACER_HPP
 
-int	main(int argc, char **argv)
+# include <iostream>
+# include <fstream>
+# include <string>
+
+class Replacer
 {
-	if (argc != 4)
-	{
-		std::cerr << "Usage: ./replace <filename> <s1> <s2>" << std::endl;
-		return (1);
-	}
+	private:
+		std::string filename;
+		std::string s1;
+		std::string s2;
+	public:
+		Replacer(const std::string& filename, const std::string& s1, const std::string& s2);
+		bool validateInputs() const;
+		bool replaceStringsInFile() const;
+};
 
-	Replacer replacer(argv[1], argv[2], argv[3]);
-
-	if (!replacer.validateInputs()) {
-		return 1;
-	}
-
-	if (!replacer.replaceStringsInFile()) {
-		return 1;
-	}
-
-	return (0);
-}
+# endif
